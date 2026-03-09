@@ -140,3 +140,51 @@ clearInterval(move)
 
 setInterval(createMicrobe,500)
 
+/* =========================
+   Multilingual Welcome
+========================= */
+
+const welcomeWords = [
+
+"Welcome",
+"Bienvenido",
+"Bienvenue",
+"Willkommen",
+"Benvenuto",
+"स्वागत है",
+"வணக்கம்",
+"నమస్కారం",
+"നമസ്കാരം",
+"স্বাগতম",
+"欢迎",
+"ようこそ",
+"환영합니다",
+"Добро пожаловать"
+
+]
+
+let index = 0
+
+function changeWelcome(){
+
+const element = document.getElementById("welcomeText")
+
+if(element){
+
+element.textContent = welcomeWords[index]
+
+index++
+
+if(index >= welcomeWords.length){
+
+index = 0
+
+}
+
+}
+
+}
+
+setInterval(changeWelcome,2000)
+
+changeWelcome()
