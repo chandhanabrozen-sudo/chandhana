@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Chandna Biswas | Microbiology Portfolio</title>
+
+<style>
+
+body{
+margin:0;
+font-family:Arial;
+background:#0b0f1a;
+color:white;
+}
+
+/* hero */
+
+header{
+text-align:center;
+padding:80px 20px;
+background:linear-gradient(120deg,#0b0f1a,#111a30);
+}
+
+header h1{
+font-size:50px;
+color:#00eaff;
+margin:10px;
+}
+
+header p{
+font-size:20px;
+color:#ddd;
+}
+
+/* sections */
+
+section{
+padding:60px;
+text-align:center;
+}
+
+h2{
+color:#00eaff;
+margin-bottom:30px;
+}
+
+/* about */
+
+.about-container{
+max-width:800px;
+margin:auto;
+font-size:18px;
+line-height:1.6;
+}
+
+/* cards */
+
+.cards{
+display:flex;
+justify-content:center;
+gap:30px;
+flex-wrap:wrap;
+}
+
+.card{
+background:#18233a;
+padding:25px;
+width:260px;
+border-radius:10px;
+transition:0.3s;
+}
+
+.card:hover{
+transform:scale(1.05);
+background:#21304d;
+}
+
+/* certificates */
+
+.gallery{
+display:flex;
+gap:20px;
+justify-content:center;
+flex-wrap:wrap;
+}
+
+.gallery img{
+width:320px;
+border-radius:10px;
+cursor:pointer;
+transition:0.4s;
+}
+
+.gallery img:hover{
+transform:scale(1.08);
+}
+
+/* petri dish */
+
+.petri-dish{
+
+width:420px;
+height:420px;
+
+margin:auto;
+
+border-radius:50%;
+
+background:radial-gradient(circle,#f7e4a0,#e6c67f);
+
+border:10px solid #cfcfcf;
+
+position:relative;
+
+overflow:hidden;
+
+box-shadow:0 0 30px rgba(0,255,200,0.4);
+
+}
+
+.colony{
+
+width:20px;
+height:20px;
+
+background:#ff4d6d;
+
+border-radius:50%;
+
+position:absolute;
+
+animation:growth 6s infinite;
+
+box-shadow:0 0 10px rgba(255,0,80,0.7);
+
+}
+
+@keyframes growth{
+
+0%{
+transform:scale(0.2);
+opacity:0.4;
+}
+
+50%{
+transform:scale(1.8);
+opacity:0.9;
+}
+
+100%{
+transform:scale(1);
+opacity:0.8;
+}
+
+}
+
+/* footer */
+
+footer{
+background:#111a30;
+padding:30px;
+text-align:center;
+color:#aaa;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<h1>Chandna Biswas</h1>
+
+<p>MSc (Hons) Microbiology | Research Enthusiast</p>
+
+</header>
+
+<!-- about -->
+
+<section>
+
+<h2>About Me</h2>
+
+<div class="about-container">
+
+I am Chandna Biswas, currently pursuing MSc (Hons) in Microbiology.
+My academic interests focus on microbial biotechnology,
+biopolymer research, and food microbiology.
+
+I actively participate in scientific conferences and research
+presentations related to microbial innovations and sustainable
+biotechnology solutions.
+
+</div>
+
+</section>
+
+<!-- research -->
+
+<section>
+
+<h2>Research & Scientific Participation</h2>
+
+<div class="cards">
+
+<div class="card">
+
+<h3>Punjab Science Congress</h3>
+
+<p>
+Presented research on <b>Microbial Production of
+Edible Biopolymer Films for Food Packaging</b>.
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>DBT Biotechnology Lecture</h3>
+
+<p>
+Participated in DBT-CTEP Popular Lectures organized by
+Department of Biotechnology, Government of India.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- petri dish -->
+
+<section>
+
+<h2>Microbial Culture Simulation</h2>
+
+<div class="petri-dish" id="dish"></div>
+
+</section>
+
+<!-- certificates -->
+
+<section>
+
+<h2>Certificates</h2>
+
+<div class="gallery">
+
+<img src="certificate1.jpg">
+<img src="certificate2.jpg">
+
+</div>
+
+</section>
+
+<!-- research interests -->
+
+<section>
+
+<h2>Research Interests</h2>
+
+<div class="cards">
+
+<div class="card">Microbial Biotechnology</div>
+
+<div class="card">Food Microbiology</div>
+
+<div class="card">Biopolymer Production</div>
+
+<div class="card">Industrial Fermentation</div>
+
+</div>
+
+</section>
+
+<footer>
+
+© 2026 Chandna Biswas | Microbiology Portfolio
+
+</footer>
+
+<script>
+
+/* microbial colony growth */
+
+const dish = document.getElementById("dish")
+
+function createColony(){
+
+let colony = document.createElement("div")
+
+colony.classList.add("colony")
+
+let x = Math.random()*380
+let y = Math.random()*380
+
+colony.style.left = x + "px"
+colony.style.top = y + "px"
+
+dish.appendChild(colony)
+
+setTimeout(()=>{
+colony.remove()
+},15000)
+
+}
+
+setInterval(createColony,2000)
+
+</script>
+
+</body>
+</html>
